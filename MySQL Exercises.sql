@@ -19,11 +19,11 @@ CREATE TABLE employees (
     middle_name VARCHAR(255),
     age INTEGER NOT NULL,
     current_status VARCHAR(100) NOT NULL DEFAULT 'employed',
-    PRIMARY KEY (id)
+    PRIMARY KEY (id) # assign primary key here
 );
 
 CREATE TABLE employees (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, # assign primary key here
     last_name VARCHAR(255) NOT NULL,
     first_name VARCHAR(255) NOT NULL,
     middle_name VARCHAR(255),

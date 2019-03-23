@@ -1,4 +1,4 @@
-# 0-Exercises
+-- 0-Exercises
 
 
 /*

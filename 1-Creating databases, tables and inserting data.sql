@@ -38,7 +38,7 @@ USE database_name;
 SELECT database(); 
 
 -- create a table
-CREATE TABLE table_name (
+CREATE TABLE table_name(
 	column_name data_type, 
 	column_name data_type
 ); 
@@ -95,7 +95,7 @@ CREATE TABLE cats3(
 ); -- unnamed, 99; can still manually set values to NULL since did not specify NOT NULL
 -- e.g. 
 INSERT INTO cats3(name, age) 
-VALUES(NULL, 3); #NULL, 3
+VALUES(NULL, 3); -- NULL, 3
 
 -- create a table with NOT NULL constraints and default values
 CREATE TABLE cats4( 

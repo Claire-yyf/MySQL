@@ -105,14 +105,14 @@ CREATE TABLE cats4(
 
 -- create a table with a PRIMARY KEY constraint (manually assign PK)
 CREATE TABLE unique_cats (cat_id INT NOT NULL,
-                      name VARCHAR(100), 
-                      age INT,
-                      PRIMARY KEY (cat_id)
+     name VARCHAR(100), 
+     age INT,
+     PRIMARY KEY (cat_id)
 );
 
 -- create a table with a PRIMARY KEY constraint (automatically assign PK)		     
 CREATE TABLE unique_cats2 (cat_id INT NOT NULL AUTO_INCREMENT,
-                      name VARCHAR(100), 
-                      age INT,
-                      PRIMARY KEY (cat_id)
+     name VARCHAR(100), 
+     age INT,
+     PRIMARY KEY (cat_id)
 );

@@ -3,7 +3,7 @@
 
 -- get help
 help; 
- 
+
 -- show hostname
 select @@hostname; 
 
@@ -92,7 +92,7 @@ CREATE TABLE cats2(
 -- create a table with default values
 CREATE TABLE cats3( 
      name VARCHAR(100) DEFAULT 'unnamed',
-     age  INT DEFAULT 99
+     age INT DEFAULT 99
 ); -- unnamed, 99; can still manually set values to NULL since did not specify NOT NULL
 -- e.g. 
 INSERT INTO cats3(name, age) 
@@ -101,7 +101,7 @@ VALUES (NULL, 3); -- NULL, 3
 -- create a table with NOT NULL constraints and default values
 CREATE TABLE cats4( 
      name VARCHAR(100) NOT NULL DEFAULT 'unnamed',
-     age  INT NOT NULL DEFAULT 99
+     age INT NOT NULL DEFAULT 99
 ); -- unnamed, 99; cannot manually set values to NULL since specified NOT NULL
 
 -- create a table with a PRIMARY KEY constraint (manually assign PK)

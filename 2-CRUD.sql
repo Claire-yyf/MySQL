@@ -19,7 +19,7 @@ FROM table_name
 WHERE column_name1 = 'xxx' OR column_name2 = 1; -- case insensitive, column_name1 = 'xxx', 'xXx', 'XXX' will still return the same result
 -- e.g.
 SELECT * FROM cats WHERE age = 4 AND name = 'Egg';
--- give aliases
+-- use aliases
 SELECT cat_id AS id, name FROM cats;
 SELECT name AS 'cat name', breed AS 'kitty breed' FROM cats;
 

@@ -34,4 +34,3 @@ UPDATE cats SET age = 14 WHERE name = 'Misty';
 -- 2-4-Delete -- always run SELECT first to double check
 DELETE FROM cats WHERE name = 'Egg';
 DELETE FROM cats; -- delete all rows but the table remains
-

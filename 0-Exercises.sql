@@ -156,4 +156,3 @@ SELECT * FROM shirts; -- empty set
 DROP TABLE shirts; 
 SHOW TABLES; -- empty set
 DESC shirts; -- error because shirts table does not exist  
- 

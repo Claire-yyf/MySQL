@@ -210,3 +210,28 @@ ORDER BY author_lname, title; -- ORDER BY 2, 1;
 
 SELECT UPPER(CONCAT('My favorite author is ', author_fname, ' ', author_lname, '!')) AS yell FROM books
 ORDER BY author_lname;
+
+
+/*
+152. Aggregate Functions Exercises
+*/
+
+SELECT COUNT(*) FROM books; 
+
+SELECT released_year, COUNT(*) FROM books GROUP BY released_year; 
+
+SELECT SUM(stock_quantity) FROM books; 
+
+SELECT author_fname, author_lname, AVG(released_year) FROM books
+GROUP BY author_lname, author_fname;
+
+SELECT CONCAT(author_fname, ' ', author_lname), pages FROM books
+ORDER BY pages DESC LIMIT 1; 
+-- OR
+SELECT CONCAT(author_fname, ' ', author_lname), pages FROM books
+WHERE pages = (SELECT MAX(pages) FROM books);
+
+SELECT released_year AS year,
+        COUNT(*) AS '# books',
+        AVG(pages) AS 'avg pages'
+FROM books GROUP BY released_year; 

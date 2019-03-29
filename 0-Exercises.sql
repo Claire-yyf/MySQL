@@ -156,10 +156,10 @@ SELECT * FROM shirts; -- empty set
 DROP TABLE shirts; 
 SHOW TABLES; -- empty set
 DESC shirts; -- error because shirts table does not exist  
- 
+
 
 /*
-118. String Function Exercises
+118. String Functions Exercises
 */
 
 SELECT UPPER(REVERSE('Why does my cat look at me with such hatred?')); -- ?DERTAH HCUS HTIW EM TA KOOL TAC YM SEOD YHW 
@@ -184,3 +184,29 @@ SELECT CONCAT(SUBSTRING(title, 1, 10), '...') AS 'short title',
         CONCAT(author_lname, ',', author_fname) AS author,
         CONCAT(stock_quantity, ' in stock') AS quantity
 FROM books;
+
+
+/*
+134. Refining Selections Exercises
+*/
+
+SELECT title FROM books 
+WHERE title LIKE '%stories%';
+
+SELECT title, pages FROM books 
+ORDER BY pages DESC LIMIT 1;
+
+SELECT CONCAT(title, ' - ', released_year) AS summary FROM books
+ORDER BY released_year DESC LIMIT 3;
+
+SELECT title, author_lname FROM books 
+WHERE author_lname LIKE '% %';
+
+SELECT title, released_year, stock_quantity FROM books 
+ORDER BY stock_quantity LIMIT 3; 
+
+SELECT title, author_lname FROM books
+ORDER BY author_lname, title; -- ORDER BY 2, 1;
+
+SELECT UPPER(CONCAT('My favorite author is ', author_fname, ' ', author_lname, '!')) AS yell FROM books
+ORDER BY author_lname;
